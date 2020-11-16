@@ -25,5 +25,10 @@ public class MyWorld extends World
     public void prepareLaunch () {
         Rocket rocket = new Rocket();
         addObject(rocket, 30, 350);
+        
+        Target target = new Target();
+        int rand = 150+Greenfoot.getRandomNumber(400);
+        System.out.println("Target Distance: " + rand);
+        addObject(target,rand, 350);
     }
 }
