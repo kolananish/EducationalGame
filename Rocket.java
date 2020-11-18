@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Rocket extends Actor
 {
     public double time = 0;
+    public boolean done = false;
     /**
      * Constructor
      */
@@ -21,14 +22,26 @@ public class Rocket extends Actor
      */
     public void act() 
     {
-        //checks if the y position is below the ground
-        if (getY() <= 350) {
-            //increments the time
-            time += 0.1; 
-            //runs the launch method with different parameters
-            launch(time, 45, 50.0);
-        }
     }    
+    public void time()
+    {
+        //checks if the rocket is done with flight
+        while (done == false) {
+            //checks if the y position is below the ground  
+            if (getY() <= 350) {
+                //increments the time
+                time += 0.1; 
+                //runs the launch method with different parameters
+                launch(time, 45, 50.0);
+                //waits in between movements
+                Greenfoot.delay(1);
+            }
+            else {
+                //makes rocket done with flight
+                done = true;
+            }
+        }
+    }
     public void launch(double time, double angle, double velocity)
     {
         //changing the angle into radians to make it easier for substitutions 
