@@ -41,6 +41,7 @@ public class Rocket extends Actor
                 done = true;
             }
         }
+        MyWorld.addToScore();
     }
     public void launch(double time, double angle, double velocity)
     {
@@ -60,6 +61,5 @@ public class Rocket extends Actor
         setLocation​(30 + (int)xPosition, 350 - (int)yPosition); 
         
     }
-   
     
 }

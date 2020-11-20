@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public static int targetX = 0;
+    public static int score = 0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -28,10 +29,19 @@ public class MyWorld extends World
         
         Target target = new Target();
         int rand = 150+Greenfoot.getRandomNumber(400);
-        System.out.println("Target Distance: " + rand);
+        targetX = rand;
+        showText("Target Distance: " + rand, 290, 30);
         addObject(target,rand, 350);
         
         Button button = new Button();
         addObject(button, 80, 30);
+    }
+    public static void addToScore() {
+        int difference = Math.abs(targetX);
+        score += difference;
+        System.out.println(score);
+    }
+    public void updateScore() {
+        showText("Score: " + score, 500, 30);
     }
 }
