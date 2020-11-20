@@ -17,7 +17,4 @@ public class Target extends Actor
         image.scale(image.getWidth() - 550, image.getHeight() - 550);
         setImage(image);
     }
-    public int getTargetX() {
-        return getX();
-    }
 }

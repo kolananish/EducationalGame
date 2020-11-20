@@ -4,6 +4,4 @@ comment0.text=\n\ Write\ a\ description\ of\ class\ Target\ here.\n\ \n\ @author
 comment1.params=
 comment1.target=Target()
 comment1.text=\n\ Constructor\n
-comment2.params=
-comment2.target=int\ getTargetX()
-numComments=3
+numComments=2
