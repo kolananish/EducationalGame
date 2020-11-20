@@ -10,6 +10,7 @@ public class MyWorld extends World
 {
     public static int targetX = 0;
     public static int score = 0;
+    public static int rocketX;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -37,7 +38,7 @@ public class MyWorld extends World
         addObject(button, 80, 30);
     }
     public static void addToScore() {
-        int difference = Math.abs(targetX);
+        int difference = Math.abs(targetX - rocketX);
         score += difference;
         System.out.println(score);
     }

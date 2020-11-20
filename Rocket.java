@@ -10,6 +10,7 @@ public class Rocket extends Actor
 {
     public double time = 0;
     public boolean done = false;
+    public int rocketX = 30;
     /**
      * Constructor
      */
@@ -58,8 +59,7 @@ public class Rocket extends Actor
         //uses the x and y velocity to calculate the angle that the rocket should turn 
         setRotation((int)(90.0-(Math.atan(yVelocity/xVelocity) * 180/3.14)));
         //sets the rocket location to the correct x and y position 
-        setLocation​(30 + (int)xPosition, 350 - (int)yPosition); 
-        
+        setLocation​(30 + (int)xPosition, 350 - (int)yPosition);
+        MyWorld.rocketX = (int) xPosition;
     }
-    
 }
