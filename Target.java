@@ -16,7 +16,5 @@ public class Target extends Actor
         GreenfootImage image = new GreenfootImage("target.jpg");
         image.scale(image.getWidth() - 550, image.getHeight() - 550);
         setImage(image);
-        
     }
-    
 }
