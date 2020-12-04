@@ -24,16 +24,17 @@ public class Rocket extends Actor
     public void act() 
     {
     }    
-    public void time()
+    public void time(double x, int y)
     {
         //checks if the rocket is done with flight
         while (done == false) {
             //checks if the y position is below the ground  
+            //System.out.println(getY());
             if (getY() <= 350) {
                 //increments the time
                 time += 0.1; 
-                //runs the launch method with different parameters
-                launch(time, 45, 50.0);
+
+                launch(time, x, y);
                 //waits in between movements
                 Greenfoot.delay(1);
             }
